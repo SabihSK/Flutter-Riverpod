@@ -1,15 +1,12 @@
 
-import 'package:flutter/material.dart';
+import 'package:flutter_course/provider_and_riverpod/riverpod_practice.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-final myprovider = Provider<String>(
-      (ref) {
-    return "Flutter Riverpod";
-  },
-);
+import 'package:provider/provider.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_course/provider_and_riverpod/provider_practice.dart';
 
 void main(List<String> args){
-  runApp(const ProviderScope(child:MyApp()));
+  runApp(ProviderScope(child: const MyApp(),),);
 }
 
 class MyApp extends StatelessWidget {
@@ -18,21 +15,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomeScreen(),
+      home: RivPrac(),
     );
   }
 }
 
-class HomeScreen extends ConsumerWidget {
-  const HomeScreen({super.key});
 
-  @override
-  Widget build(BuildContext context,WidgetRef ref) {
-    String ourdata = ref.read<String>(myprovider);
-    return Center(
-      child: Text(
-        ourdata,
-      ),
-    );
-  }
-}
