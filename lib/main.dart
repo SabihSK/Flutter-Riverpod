@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
       onPressed: () {
         Navigator.push(context, MaterialPageRoute(builder: (context)=> CounterWidget()));
       },
-      child: Text('StateNotifierProvider'),
+      child: Text('ChangeNotifierProvider'),
     );
   }
 }
