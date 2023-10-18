@@ -1,4 +1,5 @@
 
+import 'package:flutter_course/state_notifier_provider/state_notifier_provider.dart';
 import 'package:flutter_course/stream_provider/our_stream_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
@@ -22,9 +23,9 @@ class MyApp extends StatelessWidget {
   Widget _buildButton(BuildContext context){
     return ElevatedButton(
       onPressed: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context)=> NumberScreen()));
+        Navigator.push(context, MaterialPageRoute(builder: (context)=> CounterWidget()));
       },
-      child: Text('StreamProvider'),
+      child: Text('StateNotifierProvider'),
     );
   }
 }
