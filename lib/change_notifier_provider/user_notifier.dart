@@ -8,6 +8,6 @@ class User extends ChangeNotifier{
 
   void changeUserName(){
     userName = "Taha Ali";
-    notifyListeners()
+    notifyListeners();
   }
 }

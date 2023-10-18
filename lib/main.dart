@@ -23,9 +23,9 @@ class MyApp extends StatelessWidget {
   Widget _buildButton(BuildContext context){
     return ElevatedButton(
       onPressed: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context)=> CounterWidget()));
+
       },
-      child: Text('ChangeNotifierProvider'),
+      child: Text('WeatherScreen'),
     );
   }
 }
